@@ -1,231 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
-	<meta name="generator" content="Hugo 0.55.6" />
-    <title>Stephen Gurnick</title>
-
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Learn About Me">
-    <meta name="author" content="Stephen Gurnick">
-
-    <script src="https://www.sgurnick.info/src/jquery-3.3.1.min.js"></script>
-
-    <link href="https://www.sgurnick.info/src/bootstrap.min.css" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Stephen Gurnick Info</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Avenir, Arial, Helvetica, sans-serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 72em;
+background: #e7eff8;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: 'courier new', monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
-
-<body class="bg-dark" style="font-family: 'Roboto', sans-serif;">
-
-    <div class="container">
-        <div class="d-flex flex-column flex-sm-row mt-2">
-  <div class="mr-4">
-    <script src="https://www.sgurnick.info/src/sada_main.js"></script>
-    <a href="#" class="text-white" id="toggleTheme">
-      <img
-        class="rounded-circle pt-2 mb-2"
-        src="https://www.sgurnick.info/images/sgurnick.jpg"
-        alt="Stephen Gurnick"
-        style="width: 171px;"
-    /></a>
-    <ul class="list-inline mb-1">
-    
-    <li class="list-inline-item ml-1 mr-1">
-        <a class="text-warning" href="https://app.box.com/s/10iidqx8tny866owoxrjniuw5sbx5kxt">
-            <i class="fas fa-file" title="Resume" style="font-size:25px;"></i>
-        </a>
-    </li>
-    
-    <li class="list-inline-item ml-1 mr-1">
-        <a class="text-warning" href="mailto:sgurnick@library.ucla.edu">
-            <i class="fas fa-at" title="Email" style="font-size:25px;"></i>
-        </a>
-    </li>
-    
-    <li class="list-inline-item ml-1 mr-1">
-        <a class="text-warning" href="https://www.linkedin.com/in/sgurnick/">
-            <i class="fab fa-linkedin-in" title="LinkedIn" style="font-size:25px;"></i>
-        </a>
-    </li>
-    
-    <li class="list-inline-item ml-1 mr-1">
-        <a class="text-warning" href="https://github.com/sgurnick">
-            <i class="fab fa-github" title="GitHub" style="font-size:25px;"></i>
-        </a>
-    </li>
-    
-    <li class="list-inline-item ml-1 mr-1">
-        <a class="text-warning" href="https://twitter.com/sgurnick">
-            <i class="fab fa-twitter" title="Twitter" style="font-size:25px;"></i>
-        </a>
-    </li>
-    
-</ul>
-
-  </div>
-
-  <div>
-    <h1 class="text-white mb-1">Stephen Gurnick</h1>
-    <h3 class="text-light">Learn About Me</h3>
-    <p class="text-white">
-      I&rsquo;m curious how things work. I examine, question, listen, seek to understand. There&rsquo;s no time to take things for granted. I&rsquo;m here to contribute to my community. I am a life-long learner. I enjoy discussions that lead to a new perspective.
-    </p>
-  </div>
+<body>
+<header id="title-block-header">
+<h1 class="title">Stephen Gurnick Info</h1>
+</header>
+<h2 id="about-me">About Me</h2>
+<p>I am a: Husband, Father, DevOps Culture Champion, Crisis Text Line
+Counselor, Private Pilot &amp; Ground Instructor, Runner, Hiker,
+Cribbage enthusiast</p>
+<!-- 
+Logos from:
+  https://github.com/simple-icons/simple-icons/blob/develop/slugs.md  
+  https://simpleicons.org  
+-->
+<div data-align="center">
+<p><a href="https://www.library.ucla.edu/about/staff/stephen-e-gurnick" target="_blank">
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTM2Ljc1IiBoZWlnaHQ9IjI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlVDTEFMSUJSQVJZIj48dGl0bGU+VUNMQUxJQlJBUlk8L3RpdGxlPjxnIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+PHJlY3Qgd2lkdGg9IjEzNi43NSIgaGVpZ2h0PSIyOCIgZmlsbD0iIzI3NzRhZSIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iVmVyZGFuYSxHZW5ldmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgZm9udC1zaXplPSIxMDAiPjxpbWFnZSB4PSI5IiB5PSI3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5Qm1hV3hzUFNKM2FHbDBaU0lnY205c1pUMGlhVzFuSWlCMmFXVjNRbTk0UFNJd0lEQWdNalFnTWpRaUlIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJK1BIUnBkR3hsUGtkdmIyZHNaU0JUWTJodmJHRnlQQzkwYVhSc1pUNDhjR0YwYUNCa1BTSk5OUzR5TkRJZ01UTXVOelk1VERBZ09TNDFJREV5SURCc01USWdPUzQxTFRVdU1qUXlJRFF1TWpZNVF6RTNMalUwT0NBeE1TNHlORGtnTVRRdU9UYzRJRGt1TlNBeE1pQTVMalZqTFRJdU9UYzNJREF0TlM0MU5EZ2dNUzQzTkRndE5pNDNOVGdnTkM0eU5qbDZUVEV5SURFd1lUY2dOeUF3SURFZ01DQXdJREUwSURjZ055QXdJREFnTUNBd0xURTBlaUl2UGp3dmMzWm5QZz09Ii8+PHRleHQgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHg9Ijc4My43NSIgeT0iMTc1IiB0ZXh0TGVuZ3RoPSI5MjcuNSIgZmlsbD0iI2ZmZiIgZm9udC13ZWlnaHQ9ImJvbGQiPlVDTEFMSUJSQVJZPC90ZXh0PjwvZz48L3N2Zz4=" alt="twitter" style="margin-bottom: 2px;" />
+</a> <a href="https://github.com/sgurnick" target="_blank">
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTUuNSIgaGVpZ2h0PSIyOCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJHSVRIVUIiPjx0aXRsZT5HSVRIVUI8L3RpdGxlPjxnIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+PHJlY3Qgd2lkdGg9Ijk1LjUiIGhlaWdodD0iMjgiIGZpbGw9IiM0ZDY1YTQiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTAwIj48aW1hZ2UgeD0iOSIgeT0iNyIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiB4bGluazpocmVmPSJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUJtYVd4c1BTSjNhR2wwWlNJZ2NtOXNaVDBpYVcxbklpQjJhV1YzUW05NFBTSXdJREFnTWpRZ01qUWlJSGh0Ykc1elBTSm9kSFJ3T2k4dmQzZDNMbmN6TG05eVp5OHlNREF3TDNOMlp5SStQSFJwZEd4bFBrZHBkRWgxWWp3dmRHbDBiR1UrUEhCaGRHZ2daRDBpVFRFeUlDNHlPVGRqTFRZdU5qTWdNQzB4TWlBMUxqTTNNeTB4TWlBeE1pQXdJRFV1TXpBeklETXVORE00SURrdU9DQTRMakl3TlNBeE1TNHpPRFV1Tmk0eE1UTXVPREl0TGpJMU9DNDRNaTB1TlRjM0lEQXRMakk0TlMwdU1ERXRNUzR3TkMwdU1ERTFMVEl1TURRdE15NHpNemd1TnpJMExUUXVNRFF5TFRFdU5qRXROQzR3TkRJdE1TNDJNVU0wTGpReU1pQXhPQzR3TnlBekxqWXpNeUF4Tnk0M0lETXVOak16SURFM0xqZGpMVEV1TURnM0xTNDNORFF1TURnMExTNDNNamt1TURnMExTNDNNamtnTVM0eU1EVXVNRGcwSURFdU9ETTRJREV1TWpNMklERXVPRE00SURFdU1qTTJJREV1TURjZ01TNDRNelVnTWk0NE1Ea2dNUzR6TURVZ015NDBPVFV1T1RrNExqRXdPQzB1TnpjMkxqUXhOeTB4TGpNd05TNDNOaTB4TGpZd05TMHlMalkyTlMwdU15MDFMalEyTmkweExqTXpNaTAxTGpRMk5pMDFMamt6SURBdE1TNHpNUzQwTmpVdE1pNHpPQ0F4TGpJek5TMHpMakl5TFM0eE16VXRMak13TXkwdU5UUXRNUzQxTWpNdU1UQTFMVE11TVRjMklEQWdNQ0F4TGpBd05TMHVNekl5SURNdU15QXhMakl6TGprMkxTNHlOamNnTVM0NU9DMHVNems1SURNdExqUXdOU0F4TGpBeUxqQXdOaUF5TGpBMExqRXpPQ0F6SUM0ME1EVWdNaTR5T0MweExqVTFNaUF6TGpJNE5TMHhMakl6SURNdU1qZzFMVEV1TWpNdU5qUTFJREV1TmpVekxqSTBJREl1T0RjekxqRXlJRE11TVRjMkxqYzJOUzQ0TkNBeExqSXpJREV1T1RFZ01TNHlNeUF6TGpJeUlEQWdOQzQyTVMweUxqZ3dOU0ExTGpZeU5TMDFMalEzTlNBMUxqa3lMalF5TGpNMkxqZ3hJREV1TURrMkxqZ3hJREl1TWpJZ01DQXhMall3TmkwdU1ERTFJREl1T0RrMkxTNHdNVFVnTXk0eU9EWWdNQ0F1TXpFMUxqSXhMalk1TGpneU5TNDFOME15TUM0MU5qVWdNakl1TURreUlESTBJREUzTGpVNU1pQXlOQ0F4TWk0eU9UZGpNQzAyTGpZeU55MDFMak0zTXkweE1pMHhNaTB4TWlJdlBqd3ZjM1puUGc9PSIvPjx0ZXh0IHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB4PSI1NzcuNSIgeT0iMTc1IiB0ZXh0TGVuZ3RoPSI1MTUiIGZpbGw9IiNmZmYiIGZvbnQtd2VpZ2h0PSJib2xkIj5HSVRIVUI8L3RleHQ+PC9nPjwvc3ZnPg==" alt="twitter" style="margin-bottom: 2px;" />
+</a> <a href="https://twitter.com/sgurnick" target="_blank">
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAzLjc1IiBoZWlnaHQ9IjI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlRXSVRURVIiPjx0aXRsZT5UV0lUVEVSPC90aXRsZT48ZyBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxyZWN0IHdpZHRoPSIxMDMuNzUiIGhlaWdodD0iMjgiIGZpbGw9IiMwMGFjZWUiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTAwIj48aW1hZ2UgeD0iOSIgeT0iNyIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiB4bGluazpocmVmPSJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUJtYVd4c1BTSjNhR2wwWlNJZ2NtOXNaVDBpYVcxbklpQjJhV1YzUW05NFBTSXdJREFnTWpRZ01qUWlJSGh0Ykc1elBTSm9kSFJ3T2k4dmQzZDNMbmN6TG05eVp5OHlNREF3TDNOMlp5SStQSFJwZEd4bFBsUjNhWFIwWlhJOEwzUnBkR3hsUGp4d1lYUm9JR1E5SWsweU15NDVOVE1nTkM0MU4yRXhNQ0F4TUNBd0lEQXhMVEl1T0RJMUxqYzNOU0EwTGprMU9DQTBMamsxT0NBd0lEQXdNaTR4TmpNdE1pNDNNak5qTFM0NU5URXVOVFUxTFRJdU1EQTFMamsxT1MwekxqRXlOeUF4TGpFNE5HRTBMamt5SURRdU9USWdNQ0F3TUMwNExqTTROQ0EwTGpRNE1rTTNMalk1SURndU1EazFJRFF1TURZM0lEWXVNVE1nTVM0Mk5DQXpMakUyTW1FMExqZ3lNaUEwTGpneU1pQXdJREF3TFM0Mk5qWWdNaTQwTnpWak1DQXhMamN4TGpnM0lETXVNakV6SURJdU1UZzRJRFF1TURrMllUUXVPVEEwSURRdU9UQTBJREFnTURFdE1pNHlNamd0TGpZeE5uWXVNRFpoTkM0NU1qTWdOQzQ1TWpNZ01DQXdNRE11T1RRMklEUXVPREkzSURRdU9UazJJRFF1T1RrMklEQWdNREV0TWk0eU1USXVNRGcxSURRdU9UTTJJRFF1T1RNMklEQWdNREEwTGpZd05DQXpMalF4TnlBNUxqZzJOeUE1TGpnMk55QXdJREF4TFRZdU1UQXlJREl1TVRBMVl5MHVNemtnTUMwdU56YzVMUzR3TWpNdE1TNHhOeTB1TURZM1lURXpMams1TlNBeE15NDVPVFVnTUNBd01EY3VOVFUzSURJdU1qQTVZemt1TURVeklEQWdNVE11T1RrNExUY3VORGsySURFekxqazVPQzB4TXk0NU9EVWdNQzB1TWpFZ01DMHVOREl0TGpBeE5TMHVOak5CT1M0NU16VWdPUzQ1TXpVZ01DQXdNREkwSURRdU5UbDZJaTgrUEM5emRtYysiLz48dGV4dCB0cmFuc2Zvcm09InNjYWxlKC4xKSIgeD0iNjE4Ljc1IiB5PSIxNzUiIHRleHRMZW5ndGg9IjU5Ny41IiBmaWxsPSIjZmZmIiBmb250LXdlaWdodD0iYm9sZCI+VFdJVFRFUjwvdGV4dD48L2c+PC9zdmc+" alt="twitter" style="margin-bottom: 2px;" />
+</a> <a href="https://hachyderm.io/@sgurnick" target="_blank">
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE4IiBoZWlnaHQ9IjI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik1BU1RPRE9OIj48dGl0bGU+TUFTVE9ET048L3RpdGxlPjxnIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+PHJlY3Qgd2lkdGg9IjExOCIgaGVpZ2h0PSIyOCIgZmlsbD0iIzVmOTRhZSIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iVmVyZGFuYSxHZW5ldmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgZm9udC1zaXplPSIxMDAiPjxpbWFnZSB4PSI5IiB5PSI3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5Qm1hV3hzUFNKM2FHbDBaU0lnY205c1pUMGlhVzFuSWlCMmFXVjNRbTk0UFNJd0lEQWdNalFnTWpRaUlIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJK1BIUnBkR3hsUGsxaGMzUnZaRzl1UEM5MGFYUnNaVDQ4Y0dGMGFDQmtQU0pOTWpNdU1qWTRJRFV1TXpFell5MHVNelV0TWk0MU56Z3RNaTQyTVRjdE5DNDJNUzAxTGpNd05DMDFMakF3TkVNeE55NDFNUzR5TkRJZ01UVXVOemt5SURBZ01URXVPREV6SURCb0xTNHdNMk10TXk0NU9DQXdMVFF1T0RNMUxqSTBNaTAxTGpJNE9DNHpNRGxETXk0NE9ESXVOamt5SURFdU5EazJJREl1TlRFNExqa3hOeUExTGpFeU55NDJOQ0EyTGpReE1pNDJNU0EzTGpnek55NDJOakVnT1M0eE5ETmpMakEzTkNBeExqZzNOQzR3T0RnZ015NDNORFV1TWpZZ05TNDJNVEV1TVRFNElERXVNalF1TXpJMUlESXVORGN1TmpJZ015NDJPQzQxTlNBeUxqSXpOeUF5TGpjM055QTBMakE1T0NBMExqazJJRFF1T0RVM0lESXVNek0yTGpjNU1pQTBMamcwT1M0NU1qTWdOeTR5TlRZdU16Z3VNalkxTFM0d05qRXVOVEkzTFM0eE16SXVOemcyTFM0eU1UTXVOVGcxTFM0eE9EUWdNUzR5TnkwdU16a2dNUzQzTnpRdExqYzFNMkV1TURVM0xqQTFOeUF3SURBZ01DQXVNREl6TFM0d05ETjJMVEV1T0RBNVlTNHdOVEl1TURVeUlEQWdNQ0F3TFM0d01pMHVNRFF4TGpBMU15NHdOVE1nTUNBd0lEQXRMakEwTmkwdU1ERWdNakF1TWpneUlESXdMakk0TWlBd0lEQWdNUzAwTGpjd09TNDFORFZqTFRJdU56TWdNQzB6TGpRMk15MHhMakk0TkMwekxqWTNOQzB4TGpneE9HRTFMalU1TXlBMUxqVTVNeUF3SURBZ01TMHVNekU1TFRFdU5ETXpMakExTXk0d05UTWdNQ0F3SURFZ0xqQTJOaTB1TURVMFl6RXVOVEUzTGpNMk15QXpMakEzTWk0MU5EWWdOQzQyTXpJdU5UUTJMak0zTmlBd0lDNDNOU0F3SURFdU1USTFMUzR3TVNBeExqVTNMUzR3TkRRZ015NHlNalF0TGpFeU5DQTBMamMyT0MwdU5ESXlMakF6T0MwdU1EQTRMakEzTnkwdU1ERTFMakV4TFM0d01qUWdNaTQwTXpVdExqUTJOQ0EwTGpjMU15MHhMamt5SURRdU9UZzVMVFV1TmpBMExqQXdPQzB1TVRRMUxqQXpMVEV1TlRJdU1ETXRNUzQyTnk0d01ESXRMalV4TWk0eE5qY3RNeTQyTXkwdU1ESTBMVFV1TlRRMWVtMHRNeTQzTkRnZ09TNHhPVFZvTFRJdU5UWXhWamd1TWpsak1DMHhMak13T1MwdU5UVXRNUzQ1TnpZdE1TNDJOeTB4TGprM05pMHhMakl6SURBdE1TNDRORFl1TnprdE1TNDRORFlnTWk0ek5YWXpMalF3TTJndE1pNDFORFpXT0M0Mk5qTmpNQzB4TGpVMkxTNDJNVGN0TWk0ek5TMHhMamcwT0MweUxqTTFMVEV1TVRFeUlEQXRNUzQyTmpndU5qWTRMVEV1TmpjZ01TNDVOemQyTmk0eU1UaElOQzQ0TWpKV09DNHhNREpqTUMweExqTXhMak16TnkweUxqTTFJREV1TURFeExUTXVNVEl1TmprMkxTNDNOeUF4TGpZd09DMHhMakUyTkNBeUxqYzBMVEV1TVRZMElERXVNekV4SURBZ01pNHpNREl1TlNBeUxqazJNaUF4TGpRNU9Hd3VOak00SURFdU1EWXVOak00TFRFdU1EWmpMalkyTFM0NU9Ua2dNUzQyTlMweExqUTVPQ0F5TGprMkxURXVORGs0SURFdU1UTWdNQ0F5TGpBME15NHpPVFVnTWk0M05DQXhMakUyTkM0Mk56VXVOemNnTVM0d01USWdNUzQ0TVNBeExqQXhNaUF6TGpFeWVpSXZQand2YzNablBnPT0iLz48dGV4dCB0cmFuc2Zvcm09InNjYWxlKC4xKSIgeD0iNjkwIiB5PSIxNzUiIHRleHRMZW5ndGg9Ijc0MCIgZmlsbD0iI2ZmZiIgZm9udC13ZWlnaHQ9ImJvbGQiPk1BU1RPRE9OPC90ZXh0PjwvZz48L3N2Zz4=" alt="twitter" style="margin-bottom: 2px;" />
+</a> <a href="https://www.linkedin.com/in/sgurnick" target="_blank">
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTExIiBoZWlnaHQ9IjI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkxJTktFRElOIj48dGl0bGU+TElOS0VESU48L3RpdGxlPjxnIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+PHJlY3Qgd2lkdGg9IjExMSIgaGVpZ2h0PSIyOCIgZmlsbD0iIzFlNzdiMiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iVmVyZGFuYSxHZW5ldmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgZm9udC1zaXplPSIxMDAiPjxpbWFnZSB4PSI5IiB5PSI3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5Qm1hV3hzUFNKM2FHbDBaU0lnY205c1pUMGlhVzFuSWlCMmFXVjNRbTk0UFNJd0lEQWdNalFnTWpRaUlIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJK1BIUnBkR3hsUGt4cGJtdGxaRWx1UEM5MGFYUnNaVDQ4Y0dGMGFDQmtQU0pOTWpBdU5EUTNJREl3TGpRMU1tZ3RNeTQxTlRSMkxUVXVOVFk1WXpBdE1TNHpNamd0TGpBeU55MHpMakF6TnkweExqZzFNaTB6TGpBek55MHhMamcxTXlBd0xUSXVNVE0ySURFdU5EUTFMVEl1TVRNMklESXVPVE01ZGpVdU5qWTNTRGt1TXpVeFZqbG9NeTQwTVRSMk1TNDFOakZvTGpBME5tTXVORGMzTFM0NUlERXVOak0zTFRFdU9EVWdNeTR6TnkweExqZzFJRE11TmpBeElEQWdOQzR5TmpjZ01pNHpOeUEwTGpJMk55QTFMalExTlhZMkxqSTRObnBOTlM0ek16Y2dOeTQwTXpOakxURXVNVFEwSURBdE1pNHdOak10TGpreU5pMHlMakEyTXkweUxqQTJOU0F3TFRFdU1UTTRMamt5TFRJdU1EWXpJREl1TURZekxUSXVNRFl6SURFdU1UUWdNQ0F5TGpBMk5DNDVNalVnTWk0d05qUWdNaTR3TmpNZ01DQXhMakV6T1MwdU9USTFJREl1TURZMUxUSXVNRFkwSURJdU1EWTFlbTB4TGpjNE1pQXhNeTR3TVRsSU15NDFOVFZXT1dnekxqVTJOSFl4TVM0ME5USjZUVEl5TGpJeU5TQXdTREV1TnpjeFF5NDNPVElnTUNBd0lDNDNOelFnTUNBeExqY3lPWFl5TUM0MU5ESkRNQ0F5TXk0eU1qY3VOemt5SURJMElERXVOemN4SURJMGFESXdMalExTVVNeU15NHlJREkwSURJMElESXpMakl5TnlBeU5DQXlNaTR5TnpGV01TNDNNamxETWpRZ0xqYzNOQ0F5TXk0eUlEQWdNakl1TWpJeUlEQm9MakF3TTNvaUx6NDhMM04yWno0PSIvPjx0ZXh0IHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB4PSI2NTUiIHk9IjE3NSIgdGV4dExlbmd0aD0iNjcwIiBmaWxsPSIjZmZmIiBmb250LXdlaWdodD0iYm9sZCI+TElOS0VESU48L3RleHQ+PC9nPjwvc3ZnPg==" alt="twitter" style="margin-bottom: 2px;" />
+</a></p>
 </div>
-
-        <div class="row mt-1">
-            <div class="col-sm-4 order-sm-2 bg-secondary text-white rounded pt-3">
-                <h3>Education</h3>
-
-<dl>
-    <dt><i class="fas fa-graduation-cap"></i> B.S. Information Systems Management</dt>
-    <dd class="mb-0 ml-3">University of California, Santa Cruz</dd>
-    <dd class="mb-0 ml-3">Graduated 2005</dd>
-    
-</dl>
-
-                <hr style="width:50%;">
-                <h3>Volunteer</h3>
-
-<dl>
-    <dt><i class="fas fa-hands-helping"></i> Crisis Text Line</dt>
-    <dd class="mb-0 ml-3">Crisis Counselor</dd>
-    <dd class="mb-0 ml-3">2018 - present</dd>
-    <dd class="mb-0 ml-3"><a class="text-warning" href="https://www.crisistextline.org"><i>https://www.crisistextline.org</i></a></dd>
-</dl>
-
-<dl>
-    <dt><i class="fas fa-hands-helping"></i> UCLA Student Conduct Committee</dt>
-    <dd class="mb-0 ml-3">Panel Member and Hearing Chairperson</dd>
-    <dd class="mb-0 ml-3">2014 - present</dd>
-    <dd class="mb-0 ml-3"><a class="text-warning" href="http://www.deanofstudents.ucla.edu/Student-Conduct"><i>http://www.deanofstudents.ucla.edu/Student-Conduct</i></a></dd>
-</dl>
-
-<dl>
-    <dt><i class="fas fa-hands-helping"></i> Kitty Hawk Squadron 3</dt>
-    <dd class="mb-0 ml-3">Ground Instructor</dd>
-    <dd class="mb-0 ml-3">2007 - 2017</dd>
-    <dd class="mb-0 ml-3"><a class="text-warning" href="http://www.squadron3.com"><i>http://www.squadron3.com</i></a></dd>
-</dl>
-
-
-                <hr style="width:50%;">
-                <h3>What I Do For Fun</h3>
-<ul class="list-unstyled" style="text-indent: 1.25em;">
-    
-    <li>Card Games - Cribbage and Golf</li>
-    
-    <li>Running</li>
-    
-    <li>Hiking</li>
-    
-    <li>Biking</li>
-    
-    <li>Cooking</li>
-    
+<hr />
+<table style="width: 100%">
+<tr style="vertical-align:top">
+<td style="width:60%;padding:20px">
+<h2 id="where-i-work">Where I Work</h2>
+<ul>
+<li><a href="https://www.library.ucla.edu">UCLA Library</a>
+<ul>
+<li>Development Support Supervisor</li>
+</ul></li>
 </ul>
-
-            </div>
-
-            <div class="col-sm-8 text-white pt-3">
-                <h3><i class="fas fa-briefcase"></i> Where I Work</h3>
-
-
-<dl>
-    <dt>Development Support Supervisor</dt>
-    <dd class="mb-0 ml-3">2013 - <em>Present</em></dd>
-    <dd class="mb-0 ml-3"><a class="text-warning" href="https://www.library.ucla.edu">UCLA Library</a></dd>
-    <dd class="mb-0 ml-3">I am a Systems and Infrastructure Manager with an emphasis on application and data center infrastructure development, database management, and systems monitoring. I work with developers, project managers, and systems engineers to ensure infrastructure and deployment workflows are available and functioning. I provide guidance and advice in transitioning software projects from development into production.</dd>
-</dl>
-
-                <h3><i class="fas fa-cogs"></i> What Keeps Me Busy</h3>
-
-<dl>
-    <dt> Red Hat Enterprise Linux Administration</dt>
-</dl>
-
-<dl>
-    <dt><a class="text-warning" href="https://github.com/UCLALibrary?utf8=%E2%9C%93&amp;q=topic%3Aansible"><i>Ansible Configuration Management</i></a></dt>
-</dl>
-
-<dl>
-    <dt><a class="text-warning" href="http://samvera.org"><i>Samvera Digital Library Repository System</i></a></dt>
-</dl>
-
-<dl>
-    <dt> Atlassian Confluence and JIRA Administration</dt>
-</dl>
-
-<dl>
-    <dt> MySQL DB Administration</dt>
-</dl>
-
-<dl>
-    <dt><a class="text-warning" href="https://www.shibboleth.net"><i>Shibboleth Single-Sign-On</i></a></dt>
-</dl>
-
-
-                <h3><i class="fas fa-chalkboard-teacher"></i> Training Programs Completed</h3>
-
-<dl>
-    <dd><a class="text-warning" href="https://www.chr.ucla.edu/training-and-development/professional-development-program-pdp">UCLA Professional Development Program (PDP)</a></dd>
-</dl>
-
-<dl>
-    <dd><a class="text-warning" href="https://www.chr.ucla.edu/management-and-supervision/management-development-certificate">UCLA Management Development Certificate</a></dd>
-</dl>
-
-<dl>
-    <dd><a class="text-warning" href="https://www.chr.ucla.edu/management-and-supervision/management-seminar-series">UCLA Anderson School Management Seminar Series</a></dd>
-</dl>
-
-<dl>
-    <dd><a class="text-warning" href="https://www.chr.ucla.edu/management-and-supervision/management-skills-assessment-program-msap">UCLA Management Skills Assessment Program (MSAP)</a></dd>
-</dl>
-
-<dl>
-    <dd><a class="text-warning" href="http://tmp.uclaextension.edu">UCLA Extension Technical Management Program (TMP)</a></dd>
-</dl>
-
-<dl>
-    <dd><a class="text-warning" href="https://www.vitalsmarts.com/crucial-conversations-training/">Crucial Conversations</a></dd>
-</dl>
-
-
-                <h3 class="mt-4"><i class="fas fa-microphone-alt"></i> Talks &amp; Presentations</h3>
-
-<dl>
-    <dt><a class="text-warning" href="https://www.youtube.com/watch?v=0YdZ77mORL0"><i>Embracing a Culture of DevOps with Ansible at the UCLA Library</i></a></dt>
-    <dd class="mb-0 ml-3"><a class="text-warning" href="http://uccsc.ucsd.edu/"><i>University of California Computing Services Conference</i></a></dd>
-    <dd class="mb-0 ml-3">2017 August 8</dd>
-</dl>
-
-<dl>
-    <dt> Overcoming Barriers to Engagement: Case Studies from the Academic Senate</dt>
-    <dd class="mb-0 ml-3"> UCLA Professional Development Program - Presentations to Campus Leadership</dd>
-    <dd class="mb-0 ml-3">2019 June 4</dd>
-</dl>
-
-
-            </div>
-        </div>
-    </div>
-
-    <footer class="text-center m-4">
-  
-  <i class="text-warning">Made by Stephen Gurnick | </i>
-  <a class="text-warning" href="https://github.com/darshanbaral/sada">
-    <i>Created with the Hugo sada theme</i></a>
-</footer>
-
+<p>I am a Systems and Infrastructure Manager with an emphasis on
+application and data center infrastructure development, database
+management, and systems monitoring. I work with developers, project
+managers, and systems engineers to ensure infrastructure and deployment
+workflows are available and functioning. I provide guidance and advice
+in transitioning software projects from development into production.</p>
+<h2 id="what-keeps-me-busy">What Keeps Me Busy</h2>
+<ul>
+<li><p>Red Hat Enterprise Linux Administration</p></li>
+<li><p>Kubernetes Administration</p></li>
+<li><p><a href="https://github.com/UCLALibrary?utf8=%E2%9C%93&amp;q=topic%3Aansible">Ansible
+Configuration Management</a></p></li>
+<li><p><a href="https://digital.library.ucla.edu/">Samvera Digital
+Library Repository System</a></p></li>
+<li><p>Atlassian Confluence and JIRA Administration</p></li>
+<li><p>MySQL DB Administration</p></li>
+<li><p><a href="https://www.shibboleth.net/">Shibboleth
+Single-Sign-On</a></p></li>
+</ul>
+<hr />
+<h2 id="training-programs-completed">Training Programs Completed</h2>
+<ul>
+<li><p><a href="https://www.chr.ucla.edu/training-and-development/professional-development-program-pdp">UCLA
+Professional Development Program (PDP)</a></p></li>
+<li><p><a href="https://www.chr.ucla.edu/management-and-supervision/management-development-certificate">UCLA
+Management Development Certificate</a></p></li>
+<li><p><a href="https://www.chr.ucla.edu/management-and-supervision/management-seminar-series">UCLA
+Anderson School Management Seminar Series</a></p></li>
+<li><p><a href="https://www.chr.ucla.edu/management-and-supervision/management-skills-assessment-program-msap">UCLA
+Management Skills Assessment Program (MSAP)</a></p></li>
+<li><p><a href="http://tmp.uclaextension.edu/">UCLA Extension Technical
+Management Program (TMP)</a></p></li>
+<li><p><a href="https://www.vitalsmarts.com/crucial-conversations-training/">Crucial
+Conversations</a></p></li>
+</ul>
+<hr />
+<h2 id="licenses-certificates">Licenses &amp; Certificates</h2>
+<ul>
+<li><p><a href="https://www.credly.com/badges/9ac84719-b015-4cc2-b2ea-afe5e45adf8d/public_url">Certified
+Kubernetes Administrator (CKA)</a></p></li>
+<li><p>Private Pilot &amp; Ground Instructor</p></li>
+</ul>
+<hr />
+<h2 id="talks-presentations">Talks &amp; Presentations</h2>
+<p><a href="https://www.youtube.com/watch?v=0YdZ77mORL0">Embracing a
+Culture of DevOps with Ansible at the UCLA Library</a></p>
+<ul>
+<li>University of California Computing Services Conference</li>
+<li>2017 August 8</li>
+</ul>
+<p>Overcoming Barriers to Engagement: Case Studies from the Academic
+Senate</p>
+<ul>
+<li>UCLA Professional Development Program - Presentations to Campus
+Leadership</li>
+<li>2019 June 4</li>
+</ul>
+</td>
+<td style="padding:20px;background-color:#D0E0E3">
+<h2 id="education">Education</h2>
+<ul>
+<li>B.S. Information Systems Management
+<ul>
+<li>University of California, Santa Cruz</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="volunteer">Volunteer</h2>
+<ul>
+<li><a href="https://www.crisistextline.org">Crisis Text Line</a>
+<ul>
+<li>Crisis Counselor</li>
+</ul></li>
+<li><a href="http://www.deanofstudents.ucla.edu/Student-Conduct">UCLA
+Student Conduct Committee</a>
+<ul>
+<li>Panel Member and Hearing Chairperson</li>
+</ul></li>
+<li><a href="http://www.squadron3.com">Kitty Hawk Squadron 3</a>
+<ul>
+<li>Ground Instructor</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="what-i-do-for-fun">What I Do For Fun</h2>
+<ul>
+<li>Card Games - Cribbage and Golf</li>
+<li>Running</li>
+<li>Hiking</li>
+<li>Biking</li>
+<li>Cooking</li>
+</ul>
+</td>
+</tr>
+</table>
+<hr />
 </body>
-
 </html>
